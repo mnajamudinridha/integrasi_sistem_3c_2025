@@ -1,0 +1,440 @@
+{
+	"info": {
+		"name": "Sistem Mahasiswa API",
+		"description": "API CRUD untuk Prodi, Mahasiswa, Matakuliah, dan Nilai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Prodi",
+			"item": [
+				{
+					"name": "Get All Prodi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/prodi",
+							"host": ["{{base_url}}"],
+							"path": ["api", "prodi"]
+						}
+					}
+				},
+				{
+					"name": "Get Single Prodi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/prodi/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "prodi", "1"]
+						}
+					}
+				},
+				{
+					"name": "Create Prodi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama_prodi\": \"Teknik Informatika\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/prodi",
+							"host": ["{{base_url}}"],
+							"path": ["api", "prodi"]
+						}
+					}
+				},
+				{
+					"name": "Update Prodi",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama_prodi\": \"Sistem Informasi\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/prodi/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "prodi", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Prodi",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/prodi/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "prodi", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Mahasiswa",
+			"item": [
+				{
+					"name": "Get All Mahasiswa",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/mahasiswa",
+							"host": ["{{base_url}}"],
+							"path": ["api", "mahasiswa"]
+						}
+					}
+				},
+				{
+					"name": "Get Single Mahasiswa",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/mahasiswa/12345678",
+							"host": ["{{base_url}}"],
+							"path": ["api", "mahasiswa", "12345678"]
+						}
+					}
+				},
+				{
+					"name": "Create Mahasiswa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nim\": \"12345678\",\n  \"nama\": \"John Doe\",\n  \"id_prodi\": 1,\n  \"email\": \"john@example.com\",\n  \"no_telp\": \"081234567890\",\n  \"alamat\": \"Jl. Contoh No. 123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/mahasiswa",
+							"host": ["{{base_url}}"],
+							"path": ["api", "mahasiswa"]
+						}
+					}
+				},
+				{
+					"name": "Update Mahasiswa",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama\": \"Jane Doe\",\n  \"id_prodi\": 1,\n  \"email\": \"jane@example.com\",\n  \"no_telp\": \"081234567891\",\n  \"alamat\": \"Jl. Baru No. 456\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/mahasiswa/12345678",
+							"host": ["{{base_url}}"],
+							"path": ["api", "mahasiswa", "12345678"]
+						}
+					}
+				},
+				{
+					"name": "Delete Mahasiswa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/mahasiswa/12345678",
+							"host": ["{{base_url}}"],
+							"path": ["api", "mahasiswa", "12345678"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Matakuliah",
+			"item": [
+				{
+					"name": "Get All Matakuliah",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/matakuliah",
+							"host": ["{{base_url}}"],
+							"path": ["api", "matakuliah"]
+						}
+					}
+				},
+				{
+					"name": "Get Single Matakuliah",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/matakuliah/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "matakuliah", "1"]
+						}
+					}
+				},
+				{
+					"name": "Create Matakuliah",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama_matakuliah\": \"Pemrograman Web\",\n  \"sks\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/matakuliah",
+							"host": ["{{base_url}}"],
+							"path": ["api", "matakuliah"]
+						}
+					}
+				},
+				{
+					"name": "Update Matakuliah",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama_matakuliah\": \"Basis Data Lanjut\",\n  \"sks\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/matakuliah/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "matakuliah", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Matakuliah",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/matakuliah/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "matakuliah", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Nilai",
+			"item": [
+				{
+					"name": "Get All Nilai",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/nilai",
+							"host": ["{{base_url}}"],
+							"path": ["api", "nilai"]
+						}
+					}
+				},
+				{
+					"name": "Get Single Nilai",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/nilai/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "nilai", "1"]
+						}
+					}
+				},
+				{
+					"name": "Create Nilai",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nim\": \"12345678\",\n  \"id_matakuliah\": 1,\n  \"nilai\": 85.50\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/nilai",
+							"host": ["{{base_url}}"],
+							"path": ["api", "nilai"]
+						}
+					}
+				},
+				{
+					"name": "Update Nilai",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nim\": \"12345678\",\n  \"id_matakuliah\": 1,\n  \"nilai\": 90.00\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/nilai/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "nilai", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Nilai",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/nilai/1",
+							"host": ["{{base_url}}"],
+							"path": ["api", "nilai", "1"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
